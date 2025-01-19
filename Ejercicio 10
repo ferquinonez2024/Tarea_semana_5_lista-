@@ -1,0 +1,28 @@
+// Tarea Semana 5
+
+// Listas 
+
+// Ejercicio 10: Encontrar el menor y mayor de una lista de precios
+
+using System; // Importa el espacio de nombres para funciones básicas
+using System.Linq; // Proporciona funciones para manipular colecciones y datos
+
+class Program
+{
+    static void Main()
+    {
+        // Crea un arreglo de precios
+        double[] precios = { 50, 75, 46, 22, 80, 65, 8 };
+
+        // Encuentra el menor precio usando LINQ
+        double menor = precios.Min();
+        // Encuentra el mayor precio usando LINQ
+        double mayor = precios.Max();
+
+        Console.WriteLine($"El menor precio es: {menor}"); // Muestra el menor precio
+        Console.WriteLine($"El mayor precio es: {mayor}"); // Muestra el mayor precio
+    }
+}
+
+// Universidad Estatal Amazónica
+// Tiffany Quiñonez
