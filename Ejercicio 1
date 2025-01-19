@@ -1,0 +1,33 @@
+// Tarea Semana 5
+
+// Listas 
+
+// Ejercicio 1: Almacenar y mostrar asignaturas de un curso
+
+using System; // Importa el espacio de nombres necesario para usar funciones básicas de C#
+using System.Collections.Generic; // Permite el uso de listas y otras colecciones
+
+class Program
+{
+    static void Main()
+    {
+        // Crea una lista de asignaturas y las inicializa con valores
+        List<string> asignaturas = new List<string>
+        {
+            "Matematicas",
+            "Fisica",
+            "Quimica",
+            "Historia",
+            "Lengua"
+        };
+
+        // Itera a través de la lista de asignaturas
+        foreach (string asignatura in asignaturas)
+        {
+            Console.WriteLine(asignatura); // Imprime cada asignatura en una nueva línea
+        }
+    }
+}
+
+// Universidad Estatal Amazónica
+//Tiffany Quiñonez
