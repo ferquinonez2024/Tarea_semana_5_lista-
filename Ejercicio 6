@@ -1,0 +1,48 @@
+// Tarea Semana 5
+
+// Listas 
+
+// Ejercicio 6: Eliminar asignaturas aprobadas
+
+using System; // Importa el espacio de nombres para funciones básicas
+using System.Collections.Generic; // Permite usar listas y diccionarios
+
+class Program
+{
+    static void Main()
+    {
+        // Lista con las asignaturas iniciales
+        List<string> asignaturas = new List<string>
+        {
+            "Matemáticas",
+            "Física",
+            "Química",
+            "Historia",
+            "Lengua"
+        };
+
+        // Diccionario para almacenar las notas de las asignaturas
+        Dictionary<string, double> notas = new Dictionary<string, double>();
+
+        // Solicita y almacena la nota para cada asignatura
+        foreach (string asignatura in asignaturas)
+        {
+            Console.Write($"Introduce la nota de {asignatura}: "); // Solicita la nota
+            double nota = Convert.ToDouble(Console.ReadLine()); // Convierte la entrada a un número decimal
+            notas[asignatura] = nota; // Guarda la nota en el diccionario
+        }
+
+        // Elimina las asignaturas con una nota mayor o igual a 5
+        asignaturas.RemoveAll(asignatura => notas[asignatura] >= 5);
+
+        Console.WriteLine("Debes repetir las siguientes asignaturas:");
+        // Muestra las asignaturas restantes (reprobadas)
+        foreach (string asignatura in asignaturas)
+        {
+            Console.WriteLine(asignatura); // Imprime las asignaturas pendientes
+        }
+    }
+}
+
+// Universidad Estatal Amazónica
+// Tiffany Quiñonez
