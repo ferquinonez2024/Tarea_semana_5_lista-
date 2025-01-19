@@ -1,0 +1,32 @@
+// Tarea Semana 5
+
+// Listas 
+
+// Ejercicio 8: Verificar si una palabra es un palíndromo
+
+using System; // Importa el espacio de nombres para funciones básicas
+using System.Linq; // Proporciona funciones para manipular colecciones y cadenas
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Introduce una palabra: "); // Solicita una palabra al usuario
+        string palabra = Console.ReadLine(); // Almacena la palabra ingresada
+        // Invierte la palabra usando LINQ y la convierte a una cadena
+        string inversa = new string(palabra.Reverse().ToArray());
+
+        // Compara la palabra original con su inversa, ignorando mayúsculas y minúsculas
+        if (palabra.Equals(inversa, StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("La palabra es un palíndromo."); // Es un palíndromo
+        }
+        else
+        {
+            Console.WriteLine("La palabra no es un palíndromo."); // No es un palíndromo
+        }
+    }
+}
+
+// Universidad Estatal Amazónica
+// Tiffany Quiñonez
